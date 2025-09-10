@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Stress Level Detection System 🧠
 
 ## Description
@@ -159,3 +160,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 For more information or support, please open an issue in the repository.
+=======
+# Stress-Level-Detection-System
+The Stress Level Detection System is a machine learning-powered web application that helps users monitor and analyze their stress levels.
+>>>>>>> 84190f510c140ae5f39ce069e9d0cc055d9cb20d
