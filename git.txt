@@ -1,0 +1,23 @@
+1. git init
+
+2. git add .
+
+3. git commit -m "Initial commit: Stress Level Detection System with FastAPI and Streamlit"
+
+4. git remote add origin https://github.com/aminul01-g/Stress-Level-Detection-System.git
+
+5. git branch -M main
+
+6. git push -u origin main
+
+//already some files in the remote repository
+
+1. git pull origin main --allow-unrelated-histories
+
+2. git config pull.rebase false && git pull origin main --allow-unrelated-histories
+
+3. git add .
+
+4. git commit -m "Merge remote changes and add project files"
+
+5. git push -u origin main
