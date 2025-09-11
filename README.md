@@ -25,7 +25,9 @@ The Stress Level Detection System is a machine learning-powered web application 
 - **Data Validation**: Pydantic
 
 ## Frontend Overview
-![Alt text](https://github.com/aminul01-g/Stress-Level-Detection-System/blob/a968e1c83bb75fa2e3fee6c1f67f3ca7d474136d/Screenshot%20from%202025-09-11%2010-47-19.png)
+![Home Page](https://github.com/aminul01-g/Stress-Level-Detection-System/blob/a968e1c83bb75fa2e3fee6c1f67f3ca7d474136d/Screenshot%20from%202025-09-11%2010-47-19.png)
+![About Page](https://github.com/aminul01-g/Stress-Level-Detection-System/blob/c03c676106a208febb5e404e9de611875e3bbf69/Screenshot%20from%202025-09-11%2010-47-30.png)
+![History](https://github.com/aminul01-g/Stress-Level-Detection-System/blob/c03c676106a208febb5e404e9de611875e3bbf69/Screenshot%20from%202025-09-11%2010-47-42.png)
 
 
 ## Installation
