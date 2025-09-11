@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Stress Level Detection System 🧠
 
 ## Description
@@ -23,6 +23,9 @@ The Stress Level Detection System is a machine learning-powered web application 
 - **ML Model**: scikit-learn
 - **Containerization**: Docker
 - **Data Validation**: Pydantic
+
+## Frontend Overview
+
 
 ## Installation
 
@@ -163,4 +166,4 @@ For more information or support, please open an issue in the repository.
 =======
 # Stress-Level-Detection-System
 The Stress Level Detection System is a machine learning-powered web application that helps users monitor and analyze their stress levels.
->>>>>>> 84190f510c140ae5f39ce069e9d0cc055d9cb20d
+
