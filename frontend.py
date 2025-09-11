@@ -93,7 +93,9 @@ def home_page():
 
         # Make prediction request
         try:
-            response = requests.post("http://localhost:8000/predict", json=data)
+            # Use environment variable for API URL with a default fallback
+            API_URL = st.secrets.get("API_URL", "http://localhost:8000")
+            response = requests.post(f"{API_URL}/predict", json=data)
             result = response.json()
 
             # Display result with nice formatting
