@@ -1,4 +1,14 @@
-
+---
+title: Stress Level Detection System
+emoji: 🧠
+colorFrom: blue
+colorTo: green
+sdk: streamlit
+sdk_version: 1.26.0
+app_file: app_hf.py
+pinned: false
+license: apache-2.0
+---
 # Stress Level Detection System 🧠
 
 ## Description
