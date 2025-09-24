@@ -1,3 +1,14 @@
+""" 
+app_hf.py:
+
+In the original project, you had separate files for frontend (frontend.py) and backend (app.py)
+Hugging Face Spaces works best with a single entry point that handles both the UI and API
+The app_hf.py combines both the Streamlit frontend and FastAPI backend into one file
+It runs both servers concurrently using threading, which is necessary for Hugging Face Spaces
+This simplifies deployment and ensures both frontend and backend run on the same instance
+
+
+"""
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -92,26 +103,13 @@ def home_page():
     with st.form("stress_detection_form"):
         st.write("### Enter Your Information")
         
-        col1, col2, col3 = st.columns(3)
+        col1, col2 = st.columns(2)
         
         with col1:
             anxiety_level = st.slider("Anxiety Level", 0, 21, 10)
-            mental_health_history = st.selectbox("Mental Health History", ["No", "Yes"])
+            self_esteem = st.slider("Self Esteem", 0, 30, 15)
+            mental_health_history = st.selectbox("Mental Health History", ["Yes", "No"])
             depression = st.slider("Depression Level", 0, 27, 13)
-            headache = st.slider("Headache Intensity", 0, 5, 2)
-            noise_level = st.slider("Noise Level", 0, 5, 2)
-            
-        with col2:
-            blood_pressure = st.slider("Blood Pressure Level", 0, 3, 1)
-            breathing_problem = st.slider("Breathing Problem", 0, 5, 2)
-            study_load = st.slider("Study Load", 0, 5, 2)
-            future_career_concerns = st.slider("Future Career Concerns", 0, 5, 3)
-            peer_pressure = st.slider("Peer Pressure", 0, 5, 2)
-            
-        with col3:
-            extracurricular_activities = st.slider("Extracurricular Activities", 0, 5, 2)
-            bullying = st.slider("Bullying Experience", 0, 5, 0)
-            social_support = st.slider("Social Support", 0, 3, 2)
             
         with col2:
             headache = st.slider("Headache Frequency", 0, 5, 2)
@@ -128,18 +126,13 @@ def home_page():
             # Prepare data for prediction
             data = {
                 "anxiety_level": anxiety_level,
-                "mental_health_history": 1 if mental_health_history == "Yes" else 0,
+                "self_esteem": self_esteem,
+                "mental_health_history": mental_health_history,
                 "depression": depression,
                 "headache": headache,
                 "blood_pressure": blood_pressure,
-                "breathing_problem": breathing_problem,
-                "noise_level": noise_level,
-                "study_load": study_load,
-                "future_career_concerns": future_career_concerns,
-                "peer_pressure": peer_pressure,
-                "extracurricular_activities": extracurricular_activities,
-                "bullying": bullying,
-                "social_support": social_support
+                "sleep_quality": sleep_quality,
+                "breathing_problem": breathing_problem
             }
             
             try:

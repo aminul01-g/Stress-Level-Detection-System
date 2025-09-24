@@ -1,3 +1,16 @@
+
+# Dockerfile.hf:
+
+#The original Dockerfile was configured to run only the FastAPI backend on port 8000
+#Hugging Face Spaces expects the application to run on port 7860
+#The new Dockerfile.hf is configured specifically for Hugging Face:
+#Uses Streamlit as the main entry point
+#Exposes port 7860 (Hugging Face's default port)
+#Includes health check configuration required by Hugging Face
+#Sets up the environment to run both frontend and backend together
+
+
+
 FROM python:3.11-slim
 
 WORKDIR /code
