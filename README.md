@@ -7,7 +7,7 @@ sdk: streamlit
 sdk_version: 1.26.0
 app_file: app_hf.py
 pinned: false
-license: apache-2.0
+license: mit
 ---
 # Stress Level Detection System 🧠
 
