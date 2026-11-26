@@ -1,0 +1,25 @@
+{
+  "seed": 42,
+  "features": [
+    "anxiety_level",
+    "mental_health_history",
+    "depression",
+    "headache",
+    "blood_pressure",
+    "breathing_problem",
+    "noise_level",
+    "study_load",
+    "future_career_concerns",
+    "peer_pressure",
+    "extracurricular_activities",
+    "bullying",
+    "social_support"
+  ],
+  "target_excluded": true,
+  "train_rows": 880,
+  "test_rows": 220,
+  "accuracy": 0.8818,
+  "balanced_accuracy": 0.8821,
+  "macro_f1": 0.8817,
+  "macro_roc_auc_ovr": 0.9879
+}
