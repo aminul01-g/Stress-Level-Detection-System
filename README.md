@@ -182,4 +182,4 @@ The Stress Level Detection System is a machine learning-powered web application 
 
 ## Evaluation
 
-Measured, reproducible results and known limitations are in [EVALUATION.md](EVALUATION.md).
+Measured, reproducible results and known limitations are in [EVALUATION.md](EVALUATION.md). The committed model was retrained in November 2026 with target leakage removed.
