@@ -52,7 +52,7 @@ The Stress Level Detection System is a machine learning-powered web application 
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/aminul01-g/Stress-Level-Detection-System.git
 cd stress-level-detection
 ```
 
