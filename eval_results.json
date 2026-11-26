@@ -1,16 +1,17 @@
 {
-  "evaluated_at": "2026-11-26T19:13:54.016913+00:00",
+  "evaluated_at": "2026-11-26T19:19:41.293847+00:00",
   "seed": 42,
   "dataset": {
     "rows": 1100,
-    "columns": 21,
+    "features_used": 13,
     "class_counts": {
       "0": 373,
       "1": 358,
       "2": 369
     }
   },
-  "committed_model": {
+  "committed_pipeline": {
+    "artifact_type": "Pipeline",
     "fitted_feature_names": [
       "anxiety_level",
       "mental_health_history",
@@ -24,44 +25,39 @@
       "peer_pressure",
       "extracurricular_activities",
       "bullying",
-      "stress_level"
+      "social_support"
     ],
-    "target_used_as_input": true,
-    "metrics_on_its_own_feature_set": {
-      "accuracy": 1.0,
-      "balanced_accuracy": 1.0,
-      "macro_f1": 1.0
+    "target_used_as_input": false,
+    "metrics_on_stratified_holdout": {
+      "accuracy": 0.8818,
+      "balanced_accuracy": 0.8821,
+      "macro_f1": 0.8817,
+      "macro_roc_auc_ovr": 0.9879
     }
   },
-  "leak_free_benchmark": {
-    "features_used": 20,
-    "target_excluded": true,
-    "split": "stratified 80/20, seed 42",
-    "models": {
-      "LogisticRegression": {
-        "accuracy": 0.8818,
-        "balanced_accuracy": 0.8821,
-        "macro_f1": 0.882,
-        "macro_roc_auc_ovr": 0.9853
-      },
-      "RandomForest": {
-        "accuracy": 0.8955,
-        "balanced_accuracy": 0.8958,
-        "macro_f1": 0.8953,
-        "macro_roc_auc_ovr": 0.9849
-      },
-      "KNeighbors": {
-        "accuracy": 0.85,
-        "balanced_accuracy": 0.8506,
-        "macro_f1": 0.8499,
-        "macro_roc_auc_ovr": 0.9531
-      }
+  "baselines_same_features": {
+    "LogisticRegression": {
+      "accuracy": 0.8682,
+      "balanced_accuracy": 0.8685,
+      "macro_f1": 0.8681,
+      "macro_roc_auc_ovr": 0.9798
+    },
+    "RandomForest": {
+      "accuracy": 0.8818,
+      "balanced_accuracy": 0.8821,
+      "macro_f1": 0.8817,
+      "macro_roc_auc_ovr": 0.9879
+    },
+    "KNeighbors": {
+      "accuracy": 0.8864,
+      "balanced_accuracy": 0.8869,
+      "macro_f1": 0.8862,
+      "macro_roc_auc_ovr": 0.9718
     }
   },
   "notes": [
-    "The training notebook keeps stress_level in x, so the committed model was fitted on the target.",
-    "Model/predict.py passes 13 API fields as a raw array and calls scaler.fit_transform() per request;",
-    "the scaler is never fitted on training data, so live predictions are not comparable to training.",
-    "The pickle was created with sklearn 1.3.2; evaluation used 1.9.1."
+    "The original notebook kept stress_level in x; Model/train.py is the corrected canonical training script.",
+    "The committed artifact now contains a fitted scaler, so inference only calls transform() inside the pipeline.",
+    "Holdout: stratified 80/20, seed 42, 220 rows."
   ]
 }
