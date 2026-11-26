@@ -180,3 +180,6 @@ For more information or support, please open an issue in the repository.
 # Stress-Level-Detection-System
 The Stress Level Detection System is a machine learning-powered web application that helps users monitor and analyze their stress levels.
 
+## Evaluation
+
+Measured, reproducible results and known limitations are in [EVALUATION.md](EVALUATION.md).
